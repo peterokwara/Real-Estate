@@ -1,0 +1,122 @@
+{
+  "contractName": "SquareVerifier",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SquareVerifier.sol\":\"SquareVerifier\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/SquareVerifier.sol\":{\"keccak256\":\"0x897aa0a9b53db6bb2d83b5be0faf90f8e5b508e800f5226433c9e7c903aa5c62\",\"urls\":[\"bzz-raw://dfb033015baaed07dea2d9c17aae5c6f625832acd19f4f97a2734de52ba1f1ef\",\"dweb:/ipfs/Qmd45ehJZ5Zi6DTZ8ynAQznfh1DMqNwQUJQezSAFxSZvpq\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158203e784bbe0033620b755951d0551414999d00f4968ca061570df77db761bf10e264736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158203e784bbe0033620b755951d0551414999d00f4968ca061570df77db761bf10e264736f6c63430005100032",
+  "sourceMap": "771:28:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;771:28:7;;;;;;;",
+  "deployedSourceMap": "771:28:7:-;;;;;",
+  "source": "pragma solidity >=0.4.21 <0.6.0;\n\n// TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>\n\n// TODO define another contract named SolnSquareVerifier that inherits from your ERC721Mintable class\n\n// TODO define a solutions struct that can hold an index & an address\n\n// TODO define an array of the above struct\n\n// TODO define a mapping to store unique solutions submitted\n\n// TODO Create an event to emit when a solution is added\n\n// TODO Create a function to add the solutions to the array and emit the event\n\n// TODO Create a function to mint new NFT only after the solution has been verified\n//  - make sure the solution is unique (has not been used before)\n//  - make sure you handle metadata as well as tokenSuplly\n\ncontract SquareVerifier {\n\n}\n",
+  "sourcePath": "/home/peter/Real-Estate/eth-contracts/contracts/SquareVerifier.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/SquareVerifier.sol",
+    "exportedSymbols": {
+      "SquareVerifier": [
+        7813
+      ]
+    },
+    "id": 7814,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7812,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7813,
+        "linearizedBaseContracts": [
+          7813
+        ],
+        "name": "SquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7814,
+        "src": "771:28:7"
+      }
+    ],
+    "src": "0:800:7"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/SquareVerifier.sol",
+      "exportedSymbols": {
+        "SquareVerifier": [
+          7813
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21",
+            "<",
+            "0.6",
+            ".0"
+          ]
+        },
+        "id": 7812,
+        "name": "PragmaDirective",
+        "src": "0:32:7"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7813
+          ],
+          "name": "SquareVerifier",
+          "nodes": [
+            null
+          ],
+          "scope": 7814
+        },
+        "id": 7813,
+        "name": "ContractDefinition",
+        "src": "771:28:7"
+      }
+    ],
+    "id": 7814,
+    "name": "SourceUnit",
+    "src": "0:800:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-06-21T18:23:39.147Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
