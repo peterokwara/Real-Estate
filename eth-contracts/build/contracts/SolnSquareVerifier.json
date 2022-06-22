@@ -1,0 +1,130 @@
+{
+  "contractName": "SolnSquareVerifier",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SolnSquareVerifier.sol\":\"SolnSquareVerifier\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/SolnSquareVerifier.sol\":{\"keccak256\":\"0x22becf01eda0507b6cd0476159391e2fc69b6a5607e4e8525a63d599ca60fee0\",\"urls\":[\"bzz-raw://5bf60ed15fb105305221a37999c31c7ebb978cd6e122c69e01eabb001f5ac2d1\",\"dweb:/ipfs/QmQzzeUTMBSy9GGSczno1xsL9cTDBPcGFdkunLQiyuLQGB\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158209aba4ad21c41986183027205b41333943316473ee55c56e6fde684953aecb4fa64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158209aba4ad21c41986183027205b41333943316473ee55c56e6fde684953aecb4fa64736f6c63430005100032",
+  "sourceMap": "34:30:6:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:30:6;;;;;;;",
+  "deployedSourceMap": "34:30:6:-;;;;;",
+  "source": "pragma solidity >=0.4.21 <0.6.0;\n\ncontract SolnSquareVerifier {}",
+  "sourcePath": "/home/peter/Real-Estate/eth-contracts/contracts/SolnSquareVerifier.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/SolnSquareVerifier.sol",
+    "exportedSymbols": {
+      "SolnSquareVerifier": [
+        7756
+      ]
+    },
+    "id": 7757,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7755,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:6"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7756,
+        "linearizedBaseContracts": [
+          7756
+        ],
+        "name": "SolnSquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7757,
+        "src": "34:30:6"
+      }
+    ],
+    "src": "0:64:6"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/SolnSquareVerifier.sol",
+      "exportedSymbols": {
+        "SolnSquareVerifier": [
+          7756
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21",
+            "<",
+            "0.6",
+            ".0"
+          ]
+        },
+        "id": 7755,
+        "name": "PragmaDirective",
+        "src": "0:32:6"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7756
+          ],
+          "name": "SolnSquareVerifier",
+          "nodes": [
+            null
+          ],
+          "scope": 7757
+        },
+        "id": 7756,
+        "name": "ContractDefinition",
+        "src": "34:30:6"
+      }
+    ],
+    "id": 7757,
+    "name": "SourceUnit",
+    "src": "0:64:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "1655835836845": {
+      "events": {},
+      "links": {},
+      "address": "0xC4F2EBcfD8aaFE28aaA8e25837d5729e99E39852",
+      "transactionHash": "0x9fd9d00df88e9865fcd5fea6575750d7416ea14d1149f8a78f79baf6814987f7"
+    }
+  },
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-06-22T16:23:28.992Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

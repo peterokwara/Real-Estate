@@ -41,6 +41,10 @@ contract Ownable {
         emit TransferOwnership(address(0), _owner);
     }
 
+    function owner() public view returns (address) {
+        return _owner;
+    }
+
     /**
      * @dev Transfer control of the contract to a new owner
      */
@@ -327,8 +331,8 @@ contract ERC721 is Pausable, ERC165 {
     // TIP: remember the functions to use for Counters. you can refresh yourself with the link above
     function _mint(address to, uint256 tokenId) internal {
         // Revert if given tokenId already exists or given address is invalid
-        require(!_exists(tokenId), "token ID does not exist");
-        require(to != address(0), "address is not valid");
+        require(!_exists(tokenId), "Token ID does not exist");
+        require(to != address(0), "Address is not valid");
 
         // Mint tokenId to given address & increase token count of owner
         _tokenOwner[tokenId] = to;
@@ -661,10 +665,10 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 //      -takes in a 'to' address, tokenId, and tokenURI as parameters
 //      -returns a true boolean upon completion of the function
 //      -calls the superclass mint and setTokenURI functions
-contract NipaHutERC721Token is
+contract ERC721Token is
     ERC721Metadata(
-        "Nipa Hut Token",
-        "NHT",
+        "Bathini Token",
+        "BATH",
         "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/"
     )
 {
