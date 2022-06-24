@@ -1,6 +1,6 @@
 const ERC721Token = artifacts.require('./ERC721Token');
 
-contract('TestERC721Mintable', accounts => {
+contract('Test ERC721Mintable', accounts => {
 
     const account_one = accounts[0];
     const account_two = accounts[1];
@@ -54,7 +54,6 @@ contract('TestERC721Mintable', accounts => {
 
         })
 
-        // token uri should be complete i.e: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/1
         it('should return token uri', async function () {
 
             // Get the token URI

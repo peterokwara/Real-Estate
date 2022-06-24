@@ -41,6 +41,9 @@ contract Ownable {
         emit TransferOwnership(address(0), _owner);
     }
 
+    /**
+     * @dev Return the owner of the account
+     */
     function owner() public view returns (address) {
         return _owner;
     }
@@ -201,14 +204,15 @@ contract ERC721 is Pausable, ERC165 {
         _registerInterface(_INTERFACE_ID_ERC721);
     }
 
+    /**
+     * @dev Return the token balance of given address
+     */
     function balanceOf(address owner)
         public
         view
         requireValidAddress(owner)
         returns (uint256)
     {
-        // TODO return the token balance of given address
-        // TIP: remember the functions to use for Counters. you can refresh yourself with the link above
         return _ownedTokensCount[owner].current();
     }
 
@@ -642,12 +646,6 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         return _tokenURIs[tokenId];
     }
 
-    // TODO: Create an internal function to set the tokenURI of a specified tokenId
-    // It should be the _baseTokenURI + the tokenId in string form
-    // TIP #1: use strConcat() from the imported oraclizeAPI lib to set the complete token URI
-    // TIP #2: you can also use uint2str() to convert a uint to a string
-    // see https://github.com/oraclize/ethereum-api/blob/master/oraclizeAPI_0.5.sol for strConcat()
-    // require the token exists before setting
     function _setTokenURI(uint256 tokenId) internal {
         require(_exists(tokenId), "token does not exist");
         _tokenURIs[tokenId] = usingOraclize.strConcat(
@@ -657,14 +655,6 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
     }
 }
 
-//  TODO's: Create CustomERC721Token contract that inherits from the ERC721Metadata contract. You can name this contract as you please
-//  1) Pass in appropriate values for the inherited ERC721Metadata contract
-//      - make the base token uri: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/
-//  2) create a public mint() that does the following:
-//      -can only be executed by the contract owner
-//      -takes in a 'to' address, tokenId, and tokenURI as parameters
-//      -returns a true boolean upon completion of the function
-//      -calls the superclass mint and setTokenURI functions
 contract ERC721Token is
     ERC721Metadata(
         "Bathini Token",
@@ -672,6 +662,10 @@ contract ERC721Token is
         "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/"
     )
 {
+
+    /**
+     * @dev Mint an ERC721 token
+     */
     function mint(address to, uint256 tokenId) public onlyOwner returns (bool) {
         super._mint(to, tokenId);
         super._setTokenURI(tokenId);
