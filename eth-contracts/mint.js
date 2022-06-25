@@ -11,14 +11,10 @@ let solnSquareVerifier = require("./build/contracts/SolnSquareVerifier.json");
 const url = config.url; // localhost
 const appAddress = config.solnSquareVerifierAddress;
 
-
-
 let web3Provider;
 let accounts;
 let owner;
 let realEstateContract;
-
-
 
 /**
  * Initialize web3
