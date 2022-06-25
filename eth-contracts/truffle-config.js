@@ -22,11 +22,11 @@ const path = require("path");
 
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 
-const infuraKey = "a49a2edf4f09414ab1972ce9658044c1";
+const infuraKey = "a6cb341cf6d94672a24485f50d2fa95a";
 
 const fs = require("fs");
 
-const privateKey = fs.readFileSync(".secret").toString().trim();
+const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 module.exports = {
   /**
@@ -55,7 +55,7 @@ module.exports = {
     rinkeby: {
       provider: () =>
         new HDWalletProvider(
-          privateKey,
+          mnemonic,
           `https://rinkeby.infura.io/v3/${infuraKey}`
         ),
       network_id: 4, // rinkeby's id
@@ -101,7 +101,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      // version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
+      // version: "0.5.0",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {

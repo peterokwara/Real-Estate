@@ -31720,7 +31720,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-24T14:10:16.871Z",
+  "updatedAt": "2022-06-25T06:05:56.666Z",
   "devdoc": {
     "methods": {
       "balanceOf(address)": {
