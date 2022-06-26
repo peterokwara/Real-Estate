@@ -1,20 +1,19 @@
-
-
-const { ethers } = require("ethers");
-const config = require("./data/config.local.json");
-let solnSquareVerifier = require("./build/contracts/SolnSquareVerifier.json");
+const solnSquareVerifier = require("./build/contracts/SolnSquareVerifier.json");
+const Web3 = require('web3');
+const fs = require("fs");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 // Url where the contract is deployed
 // const url = "https://rinkeby.infura.io/v3/a6cb341cf6d94672a24485f50d2fa95a" // rinkeby
-// const appAddress = "0x72266125eA9F5a4a46F9f908F964a31760d703a7"; // rinkeby
+const appAddress = "0xA39Fd52147Cd7320e164e4017DAda772eE9b75bB"; // rinkeby
 
-const url = config.url; // localhost
-const appAddress = config.solnSquareVerifierAddress;
+const infuraKey = "a6cb341cf6d94672a24485f50d2fa95a";
+const mnemonic = fs.readFileSync(".secret").toString().trim();
 
-let web3Provider;
-let accounts;
-let owner;
+let infuraProvider;
 let realEstateContract;
+let accounts
+let web3
 
 /**
  * Initialize web3
@@ -22,20 +21,18 @@ let realEstateContract;
 async function initWeb3() {
 
     // Load web3 provider
-    web3Provider = new ethers.providers.JsonRpcProvider(url);
+    infuraProvider = await new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`, 0);
 
-    // Get all accounts
-    accounts = await web3Provider.listAccounts();
+    web3 = await new Web3(infuraProvider);
 
-    // Set the owner account
-    owner = await accounts[0];
+    // Get the accounts
+    accounts = await web3.eth.getAccounts();
 
-    // Get the signer
-    const signer = await web3Provider.getSigner();
-
-    // Get an instance of the contract
-    realEstateContract = new ethers
-        .Contract(appAddress, solnSquareVerifier.abi, signer);
+    try {
+        realEstateContract = await new web3.eth.Contract(solnSquareVerifier.abi, appAddress);
+    } catch (error) {
+        console.log(error);
+    }
 
 }
 
@@ -44,40 +41,28 @@ async function initWeb3() {
  */
 async function submitSolution(tokenID, zokratesProof) {
 
-    // Set the signer
-    const signer = web3Provider.getSigner(owner);
-
-    // Set the contract
-    const contract = realEstateContract.connect(signer);
-
     try {
-        const transaction = await contract
-            .submitSolution(...Object.values(zokratesProof.proof), zokratesProof.inputs, accounts[1], tokenID);
-        await transaction.wait();
+        let result = await realEstateContract
+            .methods
+            .submitSolution(...Object.values(zokratesProof.proof), zokratesProof.inputs, accounts[0], tokenID).send({ from: accounts[0] });
+        console.log("Submit solution result ", result)
     } catch (error) {
-        console.log(error);
+        throw new Error(error);
     }
 }
+
 
 /**
  * Mint a new token
  */
 async function mint(tokenID) {
 
-    // Set the signer
-    const signer = web3Provider.getSigner(owner);
-
-    // Set the contract
-    const contract = realEstateContract.connect(signer);
-
     try {
-        const transaction = await contract.mint(accounts[1], tokenID);
-
-        await transaction.wait();
+        let result = await realEstateContract.methods.mint(accounts[0], tokenID).send({ from: accounts[0] });
+        console.log("Submit mint ", result)
     } catch (error) {
-        console.log(error);
+        throw new Eerror
     }
-
 }
 
 
