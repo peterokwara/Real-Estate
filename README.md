@@ -53,7 +53,7 @@ OpenSea Collection
 
 Ensure node is running on `v16`. Do this, ensure you have [node version manager](https://github.com/nvm-sh/nvm) installed. Once installed you can then run.
 
-```bash
+```console
 nvm install 16
 nvm use 16
 ```
@@ -100,49 +100,49 @@ truffle test
 
 Ensure you have docker installed and running. To install docker, see [here](https://docs.docker.com/engine/install/). From the home directory of the project, you can then run
 
-```
+```console
 docker run -v `pwd`/zokrates/code/:/home/zokrates/code -ti zokrates/zokrates /bin/bash
 ```
 
 This opens a bash window. From here navigate inside the `code/square/` directory
 
-```bash
+```console
 cd code/square/
 ```
 
 From here you can now compile the zokrates file that you created.
 
-```bash
+```console
 ~/zokrates compile -i square.zok
 ```
 
 Generate the trusted setup by running
 
-```bash
+```console
 ~/zokrates setup
 ```
 
 Compute witness by running
 
-```bash
+```console
 ~/zokrates compute-witness -a 5 25
 ```
 
 You can now generate proofs by running
 
-```bash
+```console
 ~/zokrates generate-proof
 ```
 
 Proofs are written out to `proof.json`. To create multiple proofs under different filenames, you can use the `-j` option. For example
 
-```bash
+```console
 ~/zokrates generate-proof -j proof_1.json
 ```
 
 Export the verifier by running
 
-```bash
+```console
 ~/zokrates export-verifier
 ```
 
@@ -157,13 +157,13 @@ To mint tokens on rinkeby, the `mint.js` file can be run. The file
 
 Ensure the node modules are installed at the root of the project. This can be done by running:
 
-```
+```console
 npm install
 ```
 
 Then you can run
 
-```
+```console
 cd eth-contracts
 node mint.js
 ```
@@ -225,4 +225,3 @@ If you have found any bugs, or have any feedback or questions and or want to pos
 <br>
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/peterokwara/Real-Estate/blob/master/LICENSE.md)
-
