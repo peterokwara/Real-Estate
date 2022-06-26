@@ -21,7 +21,7 @@ Real Estate Marketplace Dapp. Part of the Udacity Blockchain Nanodegree.
 
 ### About the website
 
-Real Estate Marketplace Dapp. An ERC721 token is minted to represent the title to the property. Before minting your property, one needs to proof that they nown the property. zk-SNARKS are used to create a verification system which can prove that one has the title to the property without revealing the specific information about the property.
+An ERC721 token is minted to represent the title to the property. Before minting your property, one needs to proof that they nown the property. zk-SNARKS are used to create a verification system which can prove that one has the title to the property without revealing the specific information about the property. The properties are then visible on **OpenSea** test environment.
 
 <p align="center">
   <img src="./assets/msedge_X0EvvwJEWF.gif"/>
@@ -45,7 +45,7 @@ Contracts
 
 OpenSea Collection
 
-- The opensea collection can be found [here](https://testnets.opensea.io/collection/bathini-token). There are 10 properties which are minted (instead of 5). Two properties have bids on them. One is https://testnets.opensea.io/assets/rinkeby/0xa39fd52147cd7320e164e4017dada772ee9b75bb/4 and the other https://testnets.opensea.io/assets/rinkeby/0xa39fd52147cd7320e164e4017dada772ee9b75bb/2
+- The opensea collection can be found [here](https://testnets.opensea.io/collection/bathini-token). There are 10 properties which are minted (instead of 5). Two properties have bids on them. One of the property [is](https://testnets.opensea.io/assets/rinkeby/0xa39fd52147cd7320e164e4017dada772ee9b75bb/4) and the other property [is](https://testnets.opensea.io/assets/rinkeby/0xa39fd52147cd7320e164e4017dada772ee9b75bb/2)
 
 #### Running the project
 
