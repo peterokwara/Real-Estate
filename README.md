@@ -45,7 +45,7 @@ Contracts
 
 OpenSea Collection
 
-- The opensea collection can be found [here](https://testnets.opensea.io/collection/bathini-token). There are 10 properties which are minted (instead of 5). Two properties have bids on them. One of the property [is](https://testnets.opensea.io/assets/rinkeby/0xa39fd52147cd7320e164e4017dada772ee9b75bb/4) and the other property [is](https://testnets.opensea.io/assets/rinkeby/0xa39fd52147cd7320e164e4017dada772ee9b75bb/2)
+- The opensea collection can be found [here](https://testnets.opensea.io/collection/bathini-token). There are 10 properties which are minted (instead of 5). Two properties have bids on them.
 
 #### Running the project
 
