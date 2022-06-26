@@ -153,9 +153,8 @@ To mint tokens on rinkeby, the `mint.js` file can be run. The file
 - Gets the seed from the `.secret file` within the contracts file
 - Instantiates the contract running on Rinkeby
 - Submits proofs to the contract running on Rinkeby and also mints a token for it
-- Ensure the `appAddress` is correct and the `infuraKey` is also correct
 
-Ensure the node modules are installed at the root of the project. This can be done by running:
+Ensure the `appAddress` is correct and the `infuraKey` is correct. The node modules are should also be installed at the root of the project. This can be done by running:
 
 ```console
 npm install
